@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Virat Kohli</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drawing Virat Kohli</h1>
+    <canvas id="kohliCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('kohliCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw head
+        ctx.beginPath();
+        ctx.arc(200, 100, 50, 0, Math.PI * 2, true);
+        ctx.fillStyle = '#ffe0bd'; // Skin color
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw eyes
+        ctx.beginPath();
+        ctx.arc(180, 90, 5, 0, Math.PI * 2, true); // Left eye
+        ctx.arc(220, 90, 5, 0, Math.PI * 2, true); // Right eye
+        ctx.fillStyle = '#000'; // Eye color
+        ctx.fill();
+
+        // Draw beard
+        ctx.beginPath();
+        ctx.moveTo(150, 100);
+        ctx.lineTo(250, 100);
+        ctx.lineTo(230, 150);
+        ctx.lineTo(170, 150);
+        ctx.closePath();
+        ctx.fillStyle = '#000'; // Beard color
+        ctx.fill();
+
+        // Draw nose
+        ctx.beginPath();
+        ctx.moveTo(200, 100);
+        ctx.lineTo(195, 120);
+        ctx.lineTo(205, 120);
+        ctx.closePath();
+        ctx.stroke();
+
+        // Draw mouth
+        ctx.beginPath();
+        ctx.arc(200, 130, 10, 0, Math.PI, false); // Mouth (smile)
+        ctx.stroke();
+
+        // Draw body
+        ctx.beginPath();
+        ctx.rect(150, 160, 100, 150); // Body
+        ctx.fillStyle = '#0073e6'; // Shirt color
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw arms
+        ctx.beginPath();
+        ctx.moveTo(150, 160);
+        ctx.lineTo(100, 220); // Left arm
+        ctx.moveTo(250, 160);
+        ctx.lineTo(300, 220); // Right arm
+        ctx.strokeStyle = '#0073e6'; // Same as shirt color
+        ctx.lineWidth = 10;
+        ctx.stroke();
+
+        // Draw legs
+        ctx.beginPath();
+        ctx.moveTo(170, 310);
+        ctx.lineTo(170, 400); // Left leg
+        ctx.moveTo(230, 310);
+        ctx.lineTo(230, 400); // Right leg
+        ctx.strokeStyle = '#000'; // Pant color
+        ctx.lineWidth = 10;
+        ctx.stroke();
+    </script>
+</body>
+</html>
