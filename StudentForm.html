@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="icon" type="image/x-icon" href="/HTML Projrect/Image/download.png">
+</head>
+<style>
+    table{background-color:lightgreen;}
+    h1{color: blue;
+    font-family: Arial;}
+</style>
+<body>
+   <center><h1>Student Registration</h1></center>
+   <form name="studentForm" action="/action.php" method="get">
+    <table cellpadding="5" cellspacing="5" bordercolor="lightgreen" align="center">
+        <tr>
+            <td>First Name :</td> <td><input type="text" name="studentFname" placeholder="Enter First name" required></td>
+        </tr>
+        <tr>
+            <td>Last Name :</td> <td><input type="text" name="studentLname" placeholder="Enter Last name" required></td>
+        </tr>
+        <tr>
+            <td>Father's Name :</td> <td><input type="text" name="fatherName" placeholder="Enter Father name" required></td>
+        </tr>
+        <tr>
+            <td>Mother's Name :</td> <td><input type="text" name="motherName" placeholder="Enter Mother name" required></td>
+        </tr>
+        <tr>
+            <td>Date of Birth :</td> <td><input type="date" name="dateOfBirth" required></td>
+        </tr>
+        <tr>
+            <td>Enter Time :</td> <td><input type="time" name="time"></td>
+        </tr>
+        <tr>
+            <td>Enter Mobile Number :</td> <td><input type="number" name="mobileNumber" required></td>
+        </tr>
+        <tr>
+            <td>Enter Email :</td> <td><input type="email" name="studentEmail" placeholder="Enter email" required></td>
+        </tr>
+         <tr>
+            <td>Create Password :</td> <td><input type="password" name="password" required></td>
+         </tr>
+        <tr>
+            <td>Choose your gender :</td> 
+            <td>
+                <input type="radio" name="gender" value="male" id="male" required>Male
+                <input type="radio" name="gender" id="female" value="female">Female
+                <input type="radio" name="gender" id="other" value="other">Other
+            </td>
+        </tr>
+        <tr>
+            <td>Enter month of filling form:</td><td><input type="month" name="month" required></td>
+        </tr>
+        <tr>
+            <td>Choose Course :</td> 
+            <td>
+                <select name="course" required>
+                    <option value=""> ---Select--- </option>
+                    <option value="HTML">HTML</option>
+                    <option value="PHP">PHP</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="CSS">CSS</option> 
+                    <option value="PYTHON">PYTHON</option>
+                </select> 
+            </td>
+        </tr>
+        <tr>
+            <td>Choose Color :</td> <td><input type="color" name="color"></td>
+        </tr>
+        <tr>
+            <td>Hobbies :</td> 
+            <td>
+                <input type="checkbox" name="hobbies" value="Singing">Singing
+                <input type="checkbox" name="hobbies" value="Dancing">Dancing
+                <input type="checkbox" name="hobbies" value="Cooking">Cooking
+                <input type="checkbox" name="hobbies" value="Playing">Playing
+                <input type="checkbox" name="hobbies" value="Reading">Reading
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Your Address:</td> 
+            <td><textarea name="address" placeholder="Enter your address" cols="20" required></textarea></td>
+        </tr>
+        <tr>
+            <td>Upload Photo:</td><td><input type="file" name="photo" required></td>
+        </tr>
+        <tr>
+            <td>Upload Signature:</td><td><input type="file" name="signature" required></td>
+        </tr>
+        <tr>
+            <td></td><td><input type="submit" name="submit" value="Submit"></td>
+            <td><input type="reset" name="reset" value="Reset"></td>
+        </tr>
+    </table>
+   </form> 
+</body>
+</html>
